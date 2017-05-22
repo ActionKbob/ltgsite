@@ -1,3 +1,5 @@
+django-env/layout/static
+django-env/layout/templates
 src/node_modules
 src/jspm_packages
 ltg-virtual-env/lib

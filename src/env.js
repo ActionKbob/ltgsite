@@ -9,6 +9,7 @@ var static = dest + appID + '/static' + appID,
 var markup = '/markup/',
     scripts = '/scripts/',
     styles = '/styles/',
+    styles = '/images/',
     fonts = '/styles/fonts/';
 
 module.exports = {
@@ -34,6 +35,12 @@ module.exports = {
     src : src + styles,
     src_files : src + styles + '**/*.{scss,css}',
     dest : static + styles
+  },
+
+  images : {
+    src : src + images,
+    src_files : src + images + '**/*.{png,jpg,jpeg,svg,gif}',
+    dest : static + images
   },
 
   fonts : {

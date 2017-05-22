@@ -35,10 +35,16 @@ gulp.task( 'assemble:styles', function(){
       				.pipe( gulp.dest( env.styles.dest ) );
 } );
 
+gulp.task( 'assemble:images', function(){
+  return  gulp.src( env.images.src_files )
+              .pipe( gulp.dest( env.images.dest ) );
+} );
+
 gulp.task( 'assemble:fonts', function(){
   return  gulp.src( env.fonts.src_files )
               .pipe( gulp.dest( env.fonts.dest ) );
 } );
+
 gulp.task( 'watch', function(){
   livereload.listen();
   gulp.watch( env.markup.src_files, [ 'assemble:markup' ] );

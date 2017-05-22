@@ -1,4 +1,4 @@
-/src/node_modules
-/src/jspm_packages
-/tg-virtual-env/bin
-/tg-virtual-env/include
+src/node_modules
+src/jspm_packages
+ltg-virtual-env/lib
+ltg-virtual-env/include

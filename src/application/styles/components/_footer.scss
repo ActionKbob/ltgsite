@@ -1,0 +1,81 @@
+footer
+{
+
+  .footer-content
+  {
+    background-color : $light-grey;
+    height: 150px;
+  }
+
+  .footer-cols
+  {
+    display : flex;
+    justify-content: center;
+
+    span
+    {
+      width : 33.33%;
+      height : 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform : uppercase;
+      font-size: .8em;
+
+      &:nth-child( 1 )
+      {
+        background-color :$brand-primary;
+        color : lighten( $brand-primary, 40% );
+        a
+        {
+          color : lighten( $brand-primary, 40% );
+        }
+      }
+
+      &:nth-child( 2 )
+      {
+        background-color : $brand-secondary;
+        color : lighten( $brand-secondary, 40% );
+        a
+        {
+          color : lighten( $brand-secondary, 40% );
+        }
+      }
+
+      &:nth-child( 3 )
+      {
+        background-color : $brand-tertiary;
+        color : lighten( $brand-tertiary, 40% );
+        a
+        {
+          color : lighten( $brand-tertiary, 40% );
+        }
+      }
+    }
+  }
+
+  .mobile-social-links
+  {
+    position : relative;
+    width : 100%;
+    display : flex;
+    justify-content : center;
+
+    .social-link
+    {
+      width: 25%;
+      text-align : center;
+      .fa
+      {
+        color : lighten( $brand-tertiary, 30% );
+        font-size : 1.5em;
+      }
+    }
+
+    @include media-breakpoint-up( md )
+    {
+      display : none;
+    }
+
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lunch Table Studios | Blog</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'layout/styles/main.css' %}">
+  </head>
+  <body>
+  {% include 'layout/includes/header.html' %}
+  <div role="main">
+    <div class="content-block">
+      <div class="container">
+        <div class="row">
+          <div class="col col-12 col-md-8">
+            {% if posts %}
+              {% for post in posts %}
+                <div class="post-preview">
+                  <h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+                  <p>{{ post.body | striptags | truncatewords:25 }}</p>
+                </div>
+              {% endfor %}
+            {% else %}
+            <p>There are no posts, sorry :(</p>
+            {% endif %}
+          </div>
+
+          <div class="col col-12 col-md-4">
+            {% if categories %}
+              <div class="blog-categories-container">
+                
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include 'layout/includes/footer.html' %}
+  <script type="text/javascript" src="{% static 'layout/scripts/main.bundle.js' %}"></script>
+  </body>
+</html>

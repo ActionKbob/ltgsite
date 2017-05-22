@@ -1,0 +1,28 @@
+div[role=main]
+{
+  background-color: white;
+  flex: 1;
+}
+
+.content-block
+{
+  padding : 2rem 0;
+  
+  @include media-breakpoint-up( md )
+  {
+    &:first-child
+    {
+      margin-top: 6rem;
+    }
+  }
+}
+
+.content-block-primary
+{
+  background-color: lighten( $brand-primary, 35% );
+}
+
+.content-block-tertiary
+{
+  background-color: lighten( $brand-tertiary, 10% );
+}

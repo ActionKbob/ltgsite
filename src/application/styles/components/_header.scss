@@ -1,0 +1,103 @@
+header
+{
+  border-image : linear-gradient( to right, $brand-primary 33%, $brand-secondary 33%, $brand-secondary 66%, $brand-tertiary 66%, $brand-tertiary 100% ) 1;
+  border-top : 8px solid;
+
+  @include media-breakpoint-up( md )
+  {
+    border-top : none;
+    border-bottom : 4px solid;
+  }
+}
+
+.header-social-bar
+{
+  height : 140px;
+  background-color : $sky-blue;
+
+  ul
+  {
+    display : none;
+  }
+
+  @include media-breakpoint-up( md )
+  {
+    display : flex;
+    align-items : center;
+    justify-content : flex-end;
+    height : 35px;
+    background-color : darken( $sky-blue, 45% );
+    font-size : .6rem;
+
+    ul
+    {
+      display : flex;
+
+      li
+      {
+        margin: 0 8px;
+
+        &:last-child
+        {
+          margin: 0;
+          &:before
+          {
+            content : '|';
+            padding-left : 2px;
+            padding-right : 8px;
+            color : #eee;
+          }
+        }
+      }
+
+      .fa
+      {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.header-nav-bar
+{
+  height: 40px;
+  background-color : darken( $sky-blue, 45% );
+
+  @include media-breakpoint-up( md )
+  {
+    height: 50px;
+    background-color : $sky-blue;
+  }
+
+  .container
+  {
+    position : static;
+    height: 100%;
+  }
+
+  @include media-breakpoint-up( md )
+  {
+    .container
+    {
+      position : relative;
+    }
+  }
+}
+
+.header-logo
+{
+  position : absolute;
+  width : 150px;
+  top : 15px;
+  left : 0;
+  right : 0;
+  margin : auto;
+
+  @include media-breakpoint-up( md )
+  {
+    top : 0;
+    right : inherit;
+    left : inherit;
+    margin: 0;
+  }
+}

@@ -1,0 +1,18 @@
+.collapse-sm
+{
+  @include media-breakpoint-down( sm )
+  {
+    .collapse-content
+    {
+      max-height : 0;
+      overflow : hidden;
+
+      transition : max-height .8s;
+
+      &.shown
+      {
+        max-height: 500px;
+      }
+    }
+  }
+}

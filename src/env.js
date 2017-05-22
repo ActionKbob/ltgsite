@@ -9,7 +9,7 @@ var static = dest + appID + '/static' + appID,
 var markup = '/markup/',
     scripts = '/scripts/',
     styles = '/styles/',
-    styles = '/images/',
+    images = '/images/',
     fonts = '/styles/fonts/';
 
 module.exports = {

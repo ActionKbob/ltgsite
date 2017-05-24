@@ -1,0 +1,35 @@
+.social-share
+{
+
+  h4
+  {
+    border-image : $ltg-border;
+    border-bottom : 2px solid;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.2rem;
+  }
+
+  ul
+  {
+    display : flex;
+
+    li
+    {
+      padding-right : 1rem;
+
+      @include media-breakpoint-up( md )
+      {
+        padding-right : 0.5rem;
+      }
+    }
+
+    .fa
+    {
+      font-size: 2em;
+    }
+
+    .fa-twitter-square{ color : $brand-twitter; }
+    .fa-facebook-square{ color : $brand-facebook; }
+    .fa-google-plus-square{ color : $brand-google-plus; }
+  }
+}

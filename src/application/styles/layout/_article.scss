@@ -1,0 +1,14 @@
+.post-featured-image
+{
+
+  height : 200px;
+  overflow : hidden;
+  display: flex;
+  justify-content : center;
+  align-items : center;
+  border-bottom : 3px solid $grey;
+
+  img{
+    width : 100%;
+  }
+}

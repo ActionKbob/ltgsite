@@ -1,0 +1,40 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="150px" height="150px" viewBox="0 0 150 150">
+<defs>
+<g id="Symbol_1_0_Layer0_0_FILL">
+<path fill="#2C3D4F" stroke="none" d="
+M 150 50
+L 150 0 0 0 0 50 150 50 Z"/>
+</g>
+
+<g id="Symbol_2_0_Layer0_0_FILL">
+<path fill="#4A6787" stroke="none" d="
+M 150 50
+L 150 0 0 0 0 50 150 50 Z"/>
+</g>
+
+<g id="Symbol_3_0_Layer0_0_FILL">
+<path fill="#E84C3D" stroke="none" d="
+M 150 50
+L 150 0 0 0 0 50 150 50 Z"/>
+</g>
+</defs>
+
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#Symbol_1_0_Layer0_0_FILL"/>
+</g>
+</g>
+
+<g transform="matrix( 1, 0, 0, 1, 0,50) ">
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#Symbol_2_0_Layer0_0_FILL"/>
+</g>
+</g>
+
+<g transform="matrix( 1, 0, 0, 1, 0,100) ">
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#Symbol_3_0_Layer0_0_FILL"/>
+</g>
+</g>
+</svg>

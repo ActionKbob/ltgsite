@@ -36,6 +36,7 @@ INSTALLED_APPS = [
 
     'layout',
     'blog',
+    'about',
 
     # Default apps
     'django.contrib.admin',

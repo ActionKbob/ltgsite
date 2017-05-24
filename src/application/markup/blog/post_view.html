@@ -13,19 +13,32 @@
   <body>
   {% include 'layout/includes/header.html' %}
   <div role="main">
+    <div class="post-featured-image">
+      <img src='//placehold.it/1280x720/B63840/FFFFFF'/>
+    </div>
     <div class="content-block">
       <div class="container">
+        {% if post %}
         <div class="row">
-          <div class="col">
-            {% if post %}
-              <h2>{{ post.title }}</h2>
+          <div class="col-12 col-md-8">
+              <h1>{{ post.title }}</h1>
               <p>{{ post.posted | date:"M  d, Y" }}</p>
               <p>{{ post.body | safe }}</p>
-            {% else %}
-              <p>This post doesn't exist, sorry :(</p>
-            {% endif %}
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="social-share">
+              <h4>Share this article</h4>
+              <ul>
+                <li><a href="#" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook-square" target="_blank"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus-square" target="_blank"></i></a></li>
+              </ul>
+            </div>
           </div>
         </div>
+        {% else %}
+          <p>This post doesn't exist, sorry :(</p>
+        {% endif %}
       </div>
     </div>
   </div>

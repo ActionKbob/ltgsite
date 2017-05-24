@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lunch Table Studios | Blog</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'layout/styles/main.css' %}">
+  </head>
+  <body>
+  {% include 'layout/includes/header.html' %}
+  <div role="main">
+    <div class="content-block">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col">
+            <h2>The Team</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            {% if members %}
+              {% for member in members %}
+              <div class="member-media mb-5">
+                <div class="media-hover-image">
+                  <img src='//placehold.it/150x150/125F4F/FFFFFF'/>
+                  <img src='//placehold.it/150x150/5F124F/FFFFFF' class="hover"/>
+                </div>
+                <div class="media-content">
+                  <div class="media-name mb-2"><h3>{{ member.get_full_name | safe }}</h3></div>
+                  <div class="media-title mb-3"><h4>{{ member.title | safe }}</h4></div>
+                  <div class="media-description">{{ member.description | safe }}</div>
+                </div>
+              </div>
+              {% endfor %}
+            {% else %}
+              <p>What's this? There's no members of our Team? That can't be right...</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include 'layout/includes/footer.html' %}
+  <script type="text/javascript" src="{% static 'layout/scripts/main.bundle.js' %}"></script>
+  </body>
+</html>

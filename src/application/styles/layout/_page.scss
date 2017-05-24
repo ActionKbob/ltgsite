@@ -7,12 +7,12 @@ div[role=main]
 .content-block
 {
   padding : 2rem 0;
-  
+
   @include media-breakpoint-up( md )
   {
     &:first-child
     {
-      margin-top: 6rem;
+      margin-top: 3rem;
     }
   }
 }

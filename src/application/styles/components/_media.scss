@@ -1,0 +1,64 @@
+.member-media
+{
+  display : flex;
+  border : 1px solid #ccc;
+
+  .hover
+  {
+    left : -100%;
+  }
+
+  &:nth-child( even )
+  {
+    flex-direction : row-reverse;
+
+    .hover
+    {
+      left : 100%;
+    }
+  }
+
+  h3, h4
+  {
+    margin : 0;
+  }
+
+}
+
+.media-hover-image
+{
+  position: relative;
+  width : 150px;
+  height : 150px;
+  overflow : hidden;
+
+  .hover
+  {
+    position : absolute;
+    top : 0;
+    z-index: 300;
+    transition : left 0.5s
+  }
+
+  img
+  {
+    width : 100%;
+    height : auto;
+  }
+
+  &:hover
+  {
+    .hover
+    {
+      left : 0;
+    }
+  }
+}
+
+.media-content
+{
+  display : flex;
+  flex-direction: column;
+  flex : 1;
+  margin : 1rem;
+}

@@ -11,10 +11,14 @@
 
 // Layout
 @import "layout/scaffolding";
+@import "layout/typography";
 @import "layout/page";
+@import "layout/article";
 
 // Components
 @import "components/header";
 @import "components/nav";
 @import "components/footer";
 @import "components/collapse";
+@import "components/media";
+@import "components/social";

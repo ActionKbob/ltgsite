@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <header>
   <div class="header-social-bar">
     <div class="container">
@@ -6,6 +7,7 @@
           <li><a href='#'><i class="fa fa-twitter"></i>twitter</a></li>
           <li><a href='#'><i class="fa fa-facebook"></i>facebook</a></li>
           <li><a href='#'><i class="fa fa-youtube-play"></i>youtube</a></li>
+          <li><a href='#'><i class="fa fa-github"></i>github</a></li>
           <li><a href='#'><i class="fa fa-ra"></i>patreon</a></li>
         </ul>
       </nav>
@@ -13,15 +15,15 @@
   </div>
   <div class="header-nav-bar">
     <div class="container">
-      <a class="header-logo" href='/'><img alt="Lunch Table Studios Header Logo" src='//placehold.it/150x150/AAAAAA/000000' srcset='//placehold.it/300x300/AAAAAA/000000 2x'/></a>
+      <a class="header-logo" href='/'><img alt="Lunch Table Studios Header Logo" src='{% static "layout/images/standard/lunch-table-studios-logo.svg" %}' srcset='{% static "layout/images/retina/lunch-table-studios-logo.svg" %} 2x'/></a>
       <nav class="header-nav collapse collapse-sm">
         <a class="hamburger" href='#'><i class="fa fa-bars collapse-toggle" aria-hidden="true"></i></a>
         <div class="navbar collapse-content">
           <ul>
-            <li><a href='#'><i class="fa fa-gamepad"></i>  Games</a></li>
-            <li><a href='#'><i class="fa fa-rocket"></i>  Item</a></li>
-            <li><a href='#'><i class="fa fa-tv"></i>  Item</a></li>
+            <li><a href='#'><i class="fa fa-rocket"></i>  Projects</a></li>
             <li><a href='#'><i class="fa fa-cubes"></i>  Item</a></li>
+            <li><a href='#'><i class="fa fa-tv"></i>  Item</a></li>
+            <li><a href='/about'><i class="fa fa-group"></i>  About</a></li>
             <li><a href='/blog'><i class="fa fa-book"></i>  Blog</a></li>
           </ul>
         </div>

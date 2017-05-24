@@ -1,6 +1,6 @@
 header
 {
-  border-image : linear-gradient( to right, $brand-primary 33%, $brand-secondary 33%, $brand-secondary 66%, $brand-tertiary 66%, $brand-tertiary 100% ) 1;
+  border-image : $ltg-border;
   border-top : 8px solid;
 
   @include media-breakpoint-up( md )
@@ -15,6 +15,9 @@ header
   height : 140px;
   background-color : $sky-blue;
 
+  background :  url( '../images/retina/cloud_repeat.png' ) repeat-y -75px -40%,
+                url( '../images/retina/cloud_repeat.png' ) repeat-y calc( 100vw - 50px ) 70%;
+
   ul
   {
     display : none;
@@ -28,6 +31,7 @@ header
     height : 35px;
     background-color : darken( $sky-blue, 45% );
     font-size : .6rem;
+    background-image : none;
 
     ul
     {
@@ -60,27 +64,27 @@ header
 
 .header-nav-bar
 {
-  height: 40px;
+  height: 35px;
   background-color : darken( $sky-blue, 45% );
-
-  @include media-breakpoint-up( md )
-  {
-    height: 50px;
-    background-color : $sky-blue;
-  }
 
   .container
   {
     position : static;
-    height: 100%;
+    height : 100%;
   }
 
   @include media-breakpoint-up( md )
   {
+    height : 45px;
+    background-color : $sky-blue;
+
     .container
     {
       position : relative;
     }
+
+    background :  url( '../images/retina/cloud_repeat.png' ) repeat-y -75px -25%,
+                  url( '../images/retina/cloud_repeat.png' ) repeat-y calc( 100vw - 30px ) -30%;
   }
 }
 
@@ -93,11 +97,19 @@ header
   right : 0;
   margin : auto;
 
+  img
+  {
+    width : 100%;
+    height : auto;
+    border : 3px solid white;
+    border-radius: 5%;
+  }
+
   @include media-breakpoint-up( md )
   {
-    top : 0;
+    width : 110px;
+    top : 5px;
     right : inherit;
     left : inherit;
-    margin: 0;
   }
 }

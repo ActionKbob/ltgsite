@@ -8,7 +8,7 @@ var gulp = require( 'gulp' ),
 
 var env = require( './env.js' );
 
-gulp.task( 'assemble', [ 'assemble:markup', 'assemble:scripts', 'assemble:styles', 'assemble:fonts' ] );
+gulp.task( 'assemble', [ 'assemble:markup', 'assemble:scripts', 'assemble:styles', 'assemble:images', 'assemble:fonts' ] );
 
 gulp.task( 'assemble:markup', function(){
   gulp.src( env.markup.src_files )

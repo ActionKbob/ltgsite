@@ -19,10 +19,17 @@
           <div class="col col-12 col-md-8">
             {% if posts %}
               {% for post in posts %}
-                <div class="post-preview">
-                  <h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
-                  <p>{{ post.body | striptags | truncatewords:25 }}</p>
-                </div>
+                {% if post.posted %}
+                  <div class="post-preview mb-5">
+                    <div><em>{{ post.created | date:"M  d, Y" }}</em></div>
+                    <hr>
+                    <div class="post-preview-image">
+                      <a href="{{ post.get_absolute_url }}"><img src="{{ post.featuredImage.url }}" alt=""></a>
+                    </div>
+                    <h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+                    <p>{{ post.body | striptags | truncatewords:25 }}</p>
+                  </div>
+                {% endif %}
               {% endfor %}
             {% else %}
             <p>There are no posts, sorry :(</p>
@@ -32,7 +39,12 @@
           <div class="col col-12 col-md-4">
             {% if categories %}
               <div class="blog-categories-container">
-                
+                <h3 class="mt-0">Categories:</h3>
+                <ul class="bulleted">
+                  {% for category in categories %}
+                  <li><a href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
+                  {% endfor %}
+                </ul>
               </div>
             {% endif %}
           </div>

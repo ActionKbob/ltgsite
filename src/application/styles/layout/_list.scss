@@ -1,0 +1,17 @@
+ul
+{
+  margin : 0;
+  padding : 0;
+  list-style : none;
+
+  &.bulleted
+  {
+    margin-left : 1rem;
+    list-style : square;
+
+    li
+    {
+      min-height : 1.4rem;
+    }
+  }
+}

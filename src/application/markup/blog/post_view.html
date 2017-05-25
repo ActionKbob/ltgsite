@@ -14,7 +14,7 @@
   {% include 'layout/includes/header.html' %}
   <div role="main">
     <div class="post-featured-image">
-      <img src='//placehold.it/1280x720/B63840/FFFFFF'/>
+      <img src='{{ post.featuredImage.url }}'/>
     </div>
     <div class="content-block">
       <div class="container">
@@ -22,7 +22,11 @@
         <div class="row">
           <div class="col-12 col-md-8">
               <h1>{{ post.title }}</h1>
-              <p>{{ post.posted | date:"M  d, Y" }}</p>
+              <div class="post-about">
+                <img src="{{ post.author.pixelPortrait.url }}" alt="">
+                <div class="ml-2">by {{ post.author.get_full_name | safe }}</div>
+              </div>
+              <p>{{ post.created | date:"M  d, Y" }}</p>
               <p>{{ post.body | safe }}</p>
           </div>
           <div class="col-12 col-md-4">

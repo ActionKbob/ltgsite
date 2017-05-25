@@ -31,8 +31,8 @@
               {% for member in members %}
               <div class="member-media mb-5">
                 <div class="media-hover-image">
-                  <img src='//placehold.it/150x150/125F4F/FFFFFF'/>
-                  <img src='//placehold.it/150x150/5F124F/FFFFFF' class="hover"/>
+                  <img src='{{ member.normalPortrait.url }}'/>
+                  <img src='{{ member.pixelPortrait.url }}' class="hover"/>
                 </div>
                 <div class="media-content">
                   <div class="media-name mb-2"><h3>{{ member.get_full_name | safe }}</h3></div>

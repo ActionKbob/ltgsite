@@ -1,11 +1,13 @@
 from django.db import models
 
 class Member( models.Model ) :
-    first_name = models.CharField( max_length = 25 )
-    last_name = models.CharField( max_length = 25 )
-    nick_name = models.CharField( max_length = 25, blank = True, null = True )
+    first_name = models.CharField( max_length = 12 )
+    last_name = models.CharField( max_length = 12 )
+    nick_name = models.CharField( max_length = 12, blank = True, null = True )
     title = models.CharField( max_length = 50 )
     description = models.TextField()
+    normalPortrait = models.ImageField( upload_to = 'images/memberPortraits/', max_length = 100, blank=True, null=True )
+    pixelPortrait = models.ImageField( upload_to = 'images/memberPortraits/', max_length = 100, blank=True, null=True )
 
     def __unicode__( self ) :
         return '%s' % self.first_name + self.last_name

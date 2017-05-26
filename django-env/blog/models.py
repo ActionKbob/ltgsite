@@ -15,7 +15,6 @@ class Blog( models.Model ) :
     featuredImage = models.ImageField( upload_to = 'images/featured/%Y/%m/%d', max_length = 100, blank=True, null=True )
     posted = models.BooleanField( default = False )
 
-
     def __unicode__( self ) :
         return '%s' % self.title
 

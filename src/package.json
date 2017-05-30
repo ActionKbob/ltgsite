@@ -20,6 +20,7 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
+    "gulp-csso": "^3.0.0",
     "gulp-jspm": "^0.5.13",
     "gulp-livereload": "^3.8.1",
     "gulp-sass": "^3.1.0",

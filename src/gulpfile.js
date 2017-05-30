@@ -2,6 +2,7 @@ var gulp = require( 'gulp' ),
     clean = require( 'gulp-clean' ),
     jspm = require( 'gulp-jspm' ),
     sass = require( 'gulp-sass' ),
+    csso = require('gulp-csso'),
     uglify = require( 'gulp-uglify' ),
     sourcemaps = require( 'gulp-sourcemaps' ),
     livereload = require( 'gulp-livereload' );
@@ -29,7 +30,8 @@ gulp.task( 'assemble:scripts', function(){
 gulp.task( 'assemble:styles', function(){
   return  gulp.src( env.styles.src + 'main.scss' )
       				.pipe( sourcemaps.init() )
-      				.pipe( sass( { outputStyle : 'compressed' } ) )
+      				.pipe( sass() )
+              .pipe( csso() )
       				.pipe( sourcemaps.write( '.' ) )
               .pipe( livereload() )
       				.pipe( gulp.dest( env.styles.dest ) );

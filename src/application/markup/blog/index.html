@@ -16,23 +16,12 @@
     <div class="content-block">
       <div class="container">
         <div class="row">
-          <div class="col col-12 col-md-8 blog-post-list">
-            {% if categories %}
-              <div class="post-categories-container">
-                <ul>
-                  <li>filter by: </li>
-                  {% for category in categories %}
-                  <li><a href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
-                  {% endfor %}
-                </ul>
-              </div>
-            {% endif %}
-
+          <div class="col col-12 col-md-8 blog-post-list pt-3">
             {% if posts %}
               <div class="post-preview-container">
               {% for post in posts %}
                 {% if post.posted %}
-                <div class="post-preview mb-5">
+                <div class="post-preview mb-4">
                   <div class="post-preview-date">
                     <ul>
                       <li>{{ post.created | date:"M" }}</li>
@@ -59,11 +48,31 @@
               {% endfor %}
               </div>
             {% else %}
-            <p>There are no posts, sorry :(</p>
+            <div class="post-preview-error"><p>There are no posts, sorry :(</p></div>
             {% endif %}
+
+            {% if page.number > 1 %}
+            <div class="pagination mb-5">
+              <ul>
+                <li>{% if page.has_previous %}<a href="/blog/{{ page.previous_page_number }}"><i class="fa fa-chevron-left"></i> Previous</a>{% endif %}</li>
+                <li>{{ page.number }} of {{ page.paginator.num_pages }}</li>
+                <li>{% if page.has_next %}<a href="/blog/{{ page.next_page_number }}">Next <i class="fa fa-chevron-right"></i></a>{% endif %}</li>
+              </ul>
+            </div>
+            {% endif %}
+
           </div>
-          <div class="col col-12 col-md-4">
-            Something in the sidebar or whatever
+          <div class="col col-12 col-md-4 pt-4">
+            {% if categories %}
+              <div class="post-categories-container">
+                <div class="mb-2">Filter by</div>
+                <ul class="bulleted">
+                  {% for category in categories %}
+                  <li><a href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
           </div>
         </div>
       </div>

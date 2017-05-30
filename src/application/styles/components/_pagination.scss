@@ -1,0 +1,24 @@
+.pagination
+{
+  ul
+  {
+    display : flex;
+    flex-direction : row;
+    justify-content: space-between;
+    width : 100%;
+
+    li
+    {
+      display: flex;
+      flex : 1 0 33.33%;
+      justify-content : center;
+      &:first-child{ justify-content : flex-start; }
+      &:last-child{ justify-content : flex-end; }
+    }
+
+    a, a:visited, a:hover
+    {
+      color : inherit;
+    }
+  }
+}

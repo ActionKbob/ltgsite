@@ -6,12 +6,12 @@ ul
 
   &.bulleted
   {
-    margin-left : 1.2rem;
-    list-style : square;
+    margin-left : 1.5rem;
+    list-style : outside;
 
     li
     {
-      min-height : 1.4rem;
+      min-height : 1.6rem;
     }
   }
 

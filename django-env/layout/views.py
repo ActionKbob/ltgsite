@@ -4,5 +4,8 @@ from django.template import RequestContext
 def index( request ) :
     return render_to_response( 'layout/index.html', {} )
 
+def contact( request ) :
+    return render_to_response( 'layout/contact/index.html', {} )
+
 def style_guide( request ) :
     return render_to_response( 'layout/style_guide.html', {} )

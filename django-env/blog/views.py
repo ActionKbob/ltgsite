@@ -19,7 +19,7 @@ def index( request, selected_page = 1 ) :
         'page' : returned_page,
     } )
 
-def post_view( request, slug ) :
+def post_view( request, slug, category ) :
     return render_to_response( 'layout/blog/post_view.html', {
         'post' : get_object_or_404( Blog, slug = slug )
     } )

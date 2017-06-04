@@ -28,7 +28,7 @@ gulp.task( 'assemble:scripts', function(){
 } );
 
 gulp.task( 'assemble:styles', function(){
-  return  gulp.src( env.styles.src + 'main.scss' )
+  return  gulp.src( [ env.styles.src + 'main.scss', env.styles.src + '/pages/*.scss' ] )
       				.pipe( sourcemaps.init() )
       				.pipe( sass() )
               .pipe( csso() )

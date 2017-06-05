@@ -13,10 +13,9 @@ header
 .header-social-bar
 {
   height : 140px;
-  background-color : $sky-blue;
-
   background :  url( '../images/retina/cloud_repeat.png' ) repeat-y -75px -40%,
                 url( '../images/retina/cloud_repeat.png' ) repeat-y calc( 100vw - 50px ) 70%;
+  background-color : $sky-blue;
 
   ul
   {
@@ -76,15 +75,14 @@ header
   @include media-breakpoint-up( md )
   {
     height : 45px;
+    background :  url( '../images/retina/cloud_repeat.png' ) repeat-y -75px -25%,
+                  url( '../images/retina/cloud_repeat.png' ) repeat-y calc( 100vw - 30px ) -30%;
     background-color : $sky-blue;
 
     .container
     {
       position : relative;
     }
-
-    background :  url( '../images/retina/cloud_repeat.png' ) repeat-y -75px -25%,
-                  url( '../images/retina/cloud_repeat.png' ) repeat-y calc( 100vw - 30px ) -30%;
   }
 }
 

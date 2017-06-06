@@ -1,7 +1,9 @@
 header
 {
+  position : relative;
   border-image : $ltg-border;
   border-top : 8px solid;
+  z-index : 1000;
 
   @include media-breakpoint-up( md )
   {

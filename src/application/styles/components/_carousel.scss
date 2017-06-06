@@ -1,0 +1,46 @@
+.carousel
+{
+  position : relative;
+  overflow : hidden;
+
+  .carousel-items
+  {
+    position : relative;
+    display : flex;
+    transition : left 0.5s;
+  }
+
+  .carousel-item
+  {
+    position : relative;
+    flex : 1 0 100%;
+    img
+    {
+      width : 100%;
+
+      &.muted
+      {
+        filter: grayscale(100%) contrast(200%) brightness(30%);
+      }
+    }
+  }
+
+  .carousel-controls
+  {
+    position : absolute;
+    width : 100%;
+    height : 100%;
+    display : flex;
+    justify-content : space-between;
+    align-items : center;
+    top : 0;
+
+    .fa
+    {
+      font-size: 3rem;
+      color : white;
+      padding: 0 3rem;
+    }
+  }
+
+}

@@ -4,8 +4,8 @@
     {% load staticfiles %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Lunch Table Studios</title>
+    <meta keywords="{{ post.keywords }}">
+    <title>Lunch Table Studios | {{ post.title }}</title>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'layout/styles/main.css' %}">
@@ -14,15 +14,7 @@
   <body>
   {% include 'layout/includes/header.html' %}
   <div role="main">
-    <div class="content-block">
-      <div class="container">
-        {% if projects %}
-          {% for project in projects %}
-            <a href="{{ project.get_absolute_url }}">{{ project.name }}</a>
-          {% endfor %}
-        {% endif %}
-      </div>
-    </div>
+    
   </div>
   {% include 'layout/includes/footer.html' %}
   <script type="text/javascript" src="{% static 'layout/scripts/main.bundle.js' %}"></script>

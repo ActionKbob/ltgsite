@@ -33,3 +33,7 @@ class Category( models.Model ) :
 
     def __str__( self ) :
         return self.title
+
+class ProjectImage( models.Model ) :
+    project = models.ForeignKey( Project, related_name = 'images' )
+    url = models.ImageField( upload_to = 'images/projects/', max_length = 100, blank = True, null = True )

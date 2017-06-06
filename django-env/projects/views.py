@@ -15,13 +15,13 @@ def index( request, selected_page = 1 ) :
 
     return render_to_response( 'layout/projects/index.html', {
         'categories' : Category.objects.all(),
-        'posts' : returned_page.object_list,
+        'projects' : returned_page.object_list,
         'page' : returned_page,
     } )
 
 def post_view( request, slug, category ) :
-    return render_to_response( 'layout/blog/post_view.html', {
-        'post' : get_object_or_404( Project, slug = slug )
+    return render_to_response( 'layout/projects/project_view.html', {
+        'post' : get_object_or_404( Project, slug = slug ),
     } )
 
 def post_category( request, slug ) :

@@ -11,7 +11,11 @@
   <div role="main">
     <div class="content-block">
       <div class="container">
-        <p>projects</p>
+        {% if projects %}
+          {% for project in projects %}
+            <a href="{{ project.get_absolute_url }}">{{ project.name }}</a>
+          {% endfor %}
+        {% endif %}
       </div>
     </div>
   </div>

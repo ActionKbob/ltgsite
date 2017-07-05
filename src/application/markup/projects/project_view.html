@@ -2,8 +2,18 @@
 <html>
   <head>
     {% load staticfiles %}
+<<<<<<< HEAD
     {% include 'layout/includes/header_includes.html' %}
     <title>Lunch Table Studios | {{ post.title }}</title>
+=======
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta keywords="{{ post.keywords }}">
+    <title>Lunch Table Studios | {{ post.title }}</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'layout/styles/main.css' %}">
+>>>>>>> c460e24a7adf7bc501a0b1dd7a0616a4010e0917
     <link rel="stylesheet" href="{% static 'layout/styles/projects.css' %}">
   </head>
   <body>

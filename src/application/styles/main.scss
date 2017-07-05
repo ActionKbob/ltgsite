@@ -1,6 +1,8 @@
 // Bootstrap
 @import 'lib/bootstrap/bootstrap-grid';
 @import 'lib/bootstrap/utilities/spacing';
+@import 'lib/bootstrap/mixins/visibility';
+@import 'lib/bootstrap/utilities/visibility';
 // @import 'lib/bootstrap/bootstrap-reboot';
 
 // Font Awesome
@@ -14,13 +16,13 @@
 @import "layout/typography";
 @import "layout/list";
 @import "layout/page";
-@import "layout/blog";
 
 // Components
 @import "components/header";
 @import "components/nav";
 @import "components/footer";
 @import "components/collapse";
+@import "components/carousel";
 @import "components/media";
 @import "components/social";
 @import "components/pagination";

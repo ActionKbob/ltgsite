@@ -30,6 +30,20 @@
     }
   }
 
+  .post-preview-title
+  {
+    font-family : $teko;
+    font-weight : 100;
+    text-transform : uppercase;
+    font-size : 2rem;
+    line-height: 3rem;
+
+    a, a:visited, a:hover
+    {
+      color : inherit;
+    }
+  }
+
   .post-preview-date
   {
     flex : 1 1;

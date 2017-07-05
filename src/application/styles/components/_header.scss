@@ -29,9 +29,15 @@ header
     align-items : center;
     justify-content : flex-end;
     height : 35px;
-    background-color : darken( $sky-blue, 45% );
+    background : linear-gradient( to right, darken( $sky-blue, 45% ) 50%, $brand-secondary 50%, $brand-secondary 100% );
     font-size : .6rem;
-    background-image : none;
+
+    .container
+    {
+      padding: 0;
+      background-color : darken( $sky-blue, 45% );
+      height: 100%;
+    }
 
     ul
     {
@@ -39,24 +45,25 @@ header
 
       li
       {
-        margin: 0 8px;
-
+        padding: 0 8px;
+        height: 100%;
+        display: flex;
+        align-items: center;
         &:last-child
         {
-          margin: 0;
-          &:before
+          background-color: $brand-secondary;
+          svg
           {
-            content : '|';
-            padding-left : 2px;
-            padding-right : 8px;
-            color : #eee;
+            position: relative;
+            top : 1px;
           }
         }
       }
 
       .fa
       {
-        margin-right: 5px;
+        margin-right : 5px;
+        font-size : .8rem;
       }
     }
   }

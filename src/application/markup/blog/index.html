@@ -2,13 +2,11 @@
 <html>
   <head>
     {% load staticfiles %}
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include 'layout/includes/header_includes.html' %}
+
 
     <title>Lunch Table Studios | Blog</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'layout/styles/main.css' %}">
   </head>
   <body>
   {% include 'layout/includes/header.html' %}
@@ -31,13 +29,13 @@
                   </div>
 
                   <div class="post-preview-content">
-                    <div class="post-preview-title">
-                      <h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
-                    </div>
                     <div class="post-preview-image">
                       <a href="{{ post.get_absolute_url }}">
                         <img src="{{ post.featuredImage.url }}" alt="">
                       </a>
+                    </div>
+                    <div class="post-preview-title">
+                      <h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
                     </div>
                     <div class="post-preview-desc">
                       {{ post.body | truncatewords:22 | safe }}

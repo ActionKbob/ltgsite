@@ -21,10 +21,16 @@ div[role=main]
 
 .content-block-primary
 {
-  background-color: lighten( $brand-primary, 35% );
+  background: linear-gradient(to bottom,hsla(211, 32%, 36%, 1) 0%,hsla(211, 32%, 46%, 1) 100%);
+  color: rgba(255,255,255,0.6);
+  border-bottom: 3px solid hsla(211, 32%, 30%, 1);
+  border-top: 3px solid hsla(211, 32%, 30%, 1);
 }
 
 .content-block-tertiary
 {
-  background-color: lighten( $brand-tertiary, 10% );
+  background: linear-gradient(to bottom,hsla(5, 79%, 50%, 1) 0%,hsl(5, 79%, 57%) 100%);
+  color: rgba(255,255,255,.6);
+  border-bottom: 3px solid hsla(5, 79%, 35%, 1);
+  border-top: 3px solid hsla(5, 79%, 35%, 1);
 }
